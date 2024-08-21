@@ -1,0 +1,72 @@
+name: ui_clone
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+
+  #for slider
+  card_swiper: ^3.0.1
+  carousel_slider: any
+
+  #for icons
+  ionicons: ^0.2.2
+  font_awesome_flutter: ^10.7.0
+
+  #for timeline
+  timelines: ^0.1.0
+
+  #for responsive
+  flutter_screenutil: any
+
+  #for animations
+  lottie: any
+
+  #size text
+  auto_size_text: any
+
+  #for country code
+  phone_input: ^1.0.0
+
+  #pinput
+  pinput: any
+
+  #for switch
+  flutter_advanced_switch: ^3.1.0
+
+  #for carousel
+  flutter_carousel_widget: ^2.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/monuments/
+    - assets/slider/
+
+  fonts:
+    - family: rio
+      fonts:
+        - asset: assets/fonts/Riona_Sans_W01_Bold_Italic.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
