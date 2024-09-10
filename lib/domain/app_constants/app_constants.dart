@@ -1,5 +1,8 @@
 import 'package:ui_clone/data/models/language_model.dart';
 
+import '../../data/models/navigation_rail_items.dart';
+import '../app_imports/app_imports.dart';
+
 class AppConstants {
   /// Language list data
   static final List<LanguageItem> languageData = [
@@ -137,5 +140,74 @@ class AppConstants {
           'https://thetimberguy.com/cdn/shop/collections/jali_range_furniture_wooden_jali_range_furniture_suppliers_india_2048x.jpg?v=1562491678',
       'title': 'Furniture',
     },
+  ];
+
+  static final List<NavigationItem> navigationItems = [
+    NavigationItem(
+      icon: Icon(Icons.favorite_border),
+      selectedIcon: Icon(Icons.favorite),
+      label: 'For You',
+    ),
+    NavigationItem(
+      icon: Icon(Icons.favorite_border),
+      selectedIcon: Icon(Icons.favorite),
+      label: 'Fashion',
+    ),
+    // Add more NavigationItems for each destination.
+    NavigationItem(
+      icon: Icon(Icons.favorite_border),
+      selectedIcon: Icon(Icons.favorite),
+      label: 'Appliances',
+    ),
+    NavigationItem(
+      icon: Icon(Icons.favorite_border),
+      selectedIcon: Icon(Icons.favorite),
+      label: 'Mobiles',
+    ),
+    NavigationItem(
+      icon: Icon(Icons.favorite_border),
+      selectedIcon: Icon(Icons.favorite),
+      label: 'Electronics',
+    ),
+    NavigationItem(
+      icon: Icon(Icons.favorite_border),
+      selectedIcon: Icon(Icons.favorite),
+      label: 'Home',
+    ),
+    NavigationItem(
+      icon: Icon(Icons.favorite_border),
+      selectedIcon: Icon(Icons.favorite),
+      label: 'Furniture',
+    ),
+    NavigationItem(
+      icon: Icon(Icons.favorite_border),
+      selectedIcon: Icon(Icons.favorite),
+      label: 'Beauty & Wellness',
+    ),
+    NavigationItem(
+      icon: Icon(Icons.favorite_border),
+      selectedIcon: Icon(Icons.favorite),
+      label: 'Toys, Baby, Books',
+    ),
+    NavigationItem(
+      icon: Icon(Icons.favorite_border),
+      selectedIcon: Icon(Icons.favorite),
+      label: 'Food & More',
+    ),
+    NavigationItem(
+      icon: Icon(Icons.favorite_border),
+      selectedIcon: Icon(Icons.favorite),
+      label: 'Sports Hub',
+    ),
+    NavigationItem(
+      icon: Icon(Icons.favorite_border),
+      selectedIcon: Icon(Icons.favorite),
+      label: 'Auto Accessories',
+    ),
+    NavigationItem(
+      icon: Icon(Icons.favorite_border),
+      selectedIcon: Icon(Icons.favorite),
+      label: 'Travel',
+    ),
   ];
 }

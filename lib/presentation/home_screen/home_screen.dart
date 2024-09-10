@@ -1,74 +1,40 @@
-import 'package:flutter/cupertino.dart';
-import 'package:ui_clone/domain/app_imports/app_imports.dart';
-import 'package:ui_clone/presentation/bottom_nav_screens/bottom_home_screen.dart';
+import 'package:flutter/material.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+import '../bottom_nav_pages/account_page.dart';
+import '../bottom_nav_pages/cart_page.dart';
+import '../bottom_nav_pages/categories_page.dart';
+import '../bottom_nav_pages/explore_page.dart';
+import '../bottom_nav_pages/home_page.dart';
+import '../custom_widgets/bottom_nav.dart';
 
+class Bottom_Nav_Page extends StatefulWidget {
+  const Bottom_Nav_Page({super.key});
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<Bottom_Nav_Page> createState() => _Bottom_Nav_PageState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
-  int _selectedIndex = 0;
-  static const List<Widget> _widgetOptions = <Widget>[
-    BottomHomeScreen(),
-    BottomHomeScreen(),
-    BottomHomeScreen(),
-    BottomHomeScreen(),
-    BottomHomeScreen(),
+class _Bottom_Nav_PageState extends State<Bottom_Nav_Page> {
+  final List<Widget> screenList = [
+    HomePage(),
+    const ExplorePage(),
+    const CategoriesScreen(),
+    const AccountPage(),
+    const CartPage(),
   ];
+  int selectedTabIndex = 0;
 
-  void _onItemTapped(int index) {
+  void onChangeTab(int index) {
     setState(() {
-      _selectedIndex = index;
+      selectedTabIndex = index;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.home),
-            label: 'Home',
-            backgroundColor: Colors.white,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.explore_outlined),
-            label: 'Explore',
-            backgroundColor: Colors.white,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.search_circle),
-            label: 'Categories',
-            backgroundColor: Colors.white,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.person),
-            label: 'Account',
-            backgroundColor: Colors.white,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.cart),
-            label: 'Cart',
-            backgroundColor: Colors.white,
-          ),
-        ],
-        unselectedItemColor: Colors.grey,
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blue,
-        // selectedFontSize: 12.sp,
-        selectedLabelStyle: UiHelper.mTextStyle12(),
-        unselectedLabelStyle: UiHelper.mTextStyle12(),
-        type: BottomNavigationBarType.fixed,
-        onTap: _onItemTapped,
-        showUnselectedLabels: true,
-      ),
+      body: screenList[selectedTabIndex],
+      bottomNavigationBar: Custom_Bottom_Nav_Page(
+          onChangeTab: onChangeTab, currentIndex: selectedTabIndex),
     );
   }
 }

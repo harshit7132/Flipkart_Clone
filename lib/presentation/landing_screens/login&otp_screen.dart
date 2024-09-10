@@ -5,7 +5,7 @@ import 'package:pinput/pinput.dart';
 import 'package:ui_clone/domain/app_color_constants/app_color_constant.dart';
 import 'package:ui_clone/domain/ui_helper/ui_helper.dart';
 
-import '../bottom_nav_screens/bottom_home_screen.dart';
+import '../home_screen/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   LoginScreen({super.key});
@@ -39,7 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
             Navigator.pushReplacement(
               context,
               MaterialPageRoute(
-                builder: (context) => const BottomHomeScreen(),
+                builder: (context) => const Bottom_Nav_Page(),
               ),
             );
           },
@@ -393,7 +393,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const BottomHomeScreen(),
+                        builder: (context) => const Bottom_Nav_Page(),
                       ),
                     );
                   }

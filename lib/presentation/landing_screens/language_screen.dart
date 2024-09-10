@@ -5,7 +5,7 @@ import 'package:ui_clone/domain/app_constants/app_constants.dart';
 import 'package:ui_clone/domain/ui_helper/ui_helper.dart';
 import 'package:ui_clone/presentation/landing_screens/login&otp_screen.dart';
 
-import '../bottom_nav_screens/bottom_home_screen.dart';
+import '../home_screen/home_screen.dart';
 
 class LanguageScreen extends StatefulWidget {
   const LanguageScreen({super.key});
@@ -39,7 +39,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
             Navigator.pushReplacement(
               context,
               MaterialPageRoute(
-                builder: (context) => const BottomHomeScreen(),
+                builder: (context) => const Bottom_Nav_Page(),
               ),
             );
           },
@@ -179,7 +179,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
             Navigator.pushReplacement(
               context,
               MaterialPageRoute(
-                builder: (context) => const BottomHomeScreen(),
+                builder: (context) => const Bottom_Nav_Page(),
               ),
             );
           },

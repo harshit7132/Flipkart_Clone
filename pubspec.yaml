@@ -58,6 +58,9 @@ flutter:
     - assets/images/
     - assets/monuments/
     - assets/slider/
+    - assets/images/banner/
+    - assets/images/mainCategories/
+    - assets/images/topCategories/
 
   fonts:
     - family: rio
